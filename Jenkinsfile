@@ -2,7 +2,7 @@ pipeline {
     agent any
 
 	environment {
-		DOCKERHUB_CREDENTIALS = credentials('DOCKER_CREDS')
+		DOCKERHUB_CREDENTIALS = credentials('dockerhub-accstoken')
 		PATH = "/opt/apachemaven/bin:$PATH"
 	}
 	

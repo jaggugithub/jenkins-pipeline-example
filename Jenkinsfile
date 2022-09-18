@@ -1,12 +1,9 @@
 pipeline {
     agent any
-	
-	tools {
-		maven "MY_MAVEN"
-	}
 
 	environment {
 		DOCKERHUB_CREDENTIALS = credentials('DOCKER_CREDS')
+		PATH = "/opt/apachemaven/bin:$PATH"
 	}
 	
 	stages {

@@ -3,7 +3,6 @@ pipeline {
 	
 	tools {
 		maven "MY_MAVEN"
-		jdk "MY_JAVA"
 	}
 
 	environment {
@@ -27,14 +26,14 @@ pipeline {
 		stage('Build Docker Image') {
 			steps {
 					sh 'echo "Building Docker Image...."'
-					sh 'docker build -t vasistaops/myjavaapp:${BUILD_NUMBER} .'
+					sh 'docker build -t jaggu199/javaapp:${BUILD_NUMBER} .'
 					sh 'echo "Docker Image built successfully...."'
 			}
 		}
 		stage('Push Docker Image') {
 			steps {
 				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
-				sh 'docker push vasistaops/myjavaapp:${BUILD_NUMBER}'
+				sh 'docker push jaggu199/javaapp:${BUILD_NUMBER}'
 			}
 		}
 	}

@@ -1,8 +1,0 @@
-{
-    "recommendations": [
-        "knisterpeter.vscode-github",
-        "janjoerke.jenkins-pipeline-linter-connector",
-        "mccarter.start-git-bash",
-        "ms-azuretools.vscode-docker"
-    ]
-}
